@@ -1,0 +1,15 @@
+{
+  "name": "hugorobitaillie_3_25062021_scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/",
+    "watch": "npm-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:Hrobitaillie/GameOn-website-FR.git"
+  }
+}
