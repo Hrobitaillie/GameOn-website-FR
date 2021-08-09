@@ -111,6 +111,17 @@ function validate(){
     emailError.style.display="none";
     mailOk=true;
   }
+//checking BirthDate Format
+  const birthformat = /^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/;
+  if(!(birthformat.test(birth.value))){
+    birthError.style.display="block";
+    birthError.innerHTML = "Merci d'entrer une date de naissance valide";
+    birthError.style.color="red";
+    birthError.style.fontSize="14px";
+  }else{
+    birthError.style.display="none";
+    birthOk=true;
+  }
   //checking quantity
   if((quantity.value=="" && !(quantity.value == Number))){
     quantityError.style.display="block";
@@ -144,7 +155,7 @@ function validate(){
   }
   if(!condition.checked){
     conditionError.style.display="block";
-    conditionError.innerHTML = "Vous devez accepter les conditions d'utilisations";
+    conditionError.innerHTML = "Vous devez accepter les termes et conditions.";
     conditionError.style.color="red";
     conditionError.style.fontSize="14px";
   }else{
