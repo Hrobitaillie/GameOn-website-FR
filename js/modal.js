@@ -172,5 +172,6 @@ function validate(){
   //Checking if everything is ok
   if(firstOk == true && lastOk == true && mailOk == true && birthOk == true && quantityOk == true && locOk == true && conditionOk == true){
     modalbg.style.display = "none";
+    alert("Votre inscription a bien été enregistrée");
   }
 }
