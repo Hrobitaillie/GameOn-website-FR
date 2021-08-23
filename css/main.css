@@ -433,6 +433,10 @@ footer {
   }
 }
 
+.ModalConfirm {
+  display: block;
+}
+
 main {
   font-size: 130%;
   font-weight: bolder;

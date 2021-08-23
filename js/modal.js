@@ -1,5 +1,5 @@
 function editNav() {
-  var x = document.getElementById("myTopnav");
+  const x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
@@ -12,6 +12,8 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const submit = document.querySelector(".btn-submit");
+const confirmBtn = document.querySelector(".confirm-btn");
+const modalConfirm = document.querySelector(".ModalConfirm");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -31,10 +33,19 @@ const closeBtn = document.querySelector(".close");
 // Close modal event
 closeBtn.addEventListener("click", closeModal);
 
-// Close modal form
+// Close modal action
 function closeModal(){
   modalbg.style.display = "none";
   console.log("close click");
+}
+
+//close confirm modal event
+confirmBtn.addEventListener("click", closeConfirm);
+
+//close confirm modal action
+function closeConfirm(){
+  console.log("modal confirm close function")
+  modalConfirm.style.display = "none";
 }
 
 //---------------------------------------------------------------
@@ -49,7 +60,7 @@ const email = document.getElementById('email');
 const birth = document.getElementById('birthdate');
 const quantity = document.getElementById('quantity');
 const loc = document.getElementById('location');
-const condition = document.getElementById('checkbox1')
+const condition = document.getElementById('checkbox1');
 
 //DOM Elements Erorr
 const firstError = document.getElementById('firstError');
@@ -172,6 +183,7 @@ function validate(){
   //Checking if everything is ok
   if(firstOk == true && lastOk == true && mailOk == true && birthOk == true && quantityOk == true && locOk == true && conditionOk == true){
     modalbg.style.display = "none";
-    alert("Votre inscription a bien été enregistrée");
+    //Open Confirm Modal
+    modalConfirm.style.display = "block";
   }
 }
