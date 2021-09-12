@@ -147,8 +147,8 @@ function validate(){
   // On test les boutons radio et sauvegarde le bouton coché
   const formulaire = document.forms['reserve']
   const radios = formulaire.elements['location'];
-  var value="";
-  for (var i = 0; i < radios.length; i++){
+  let value="";
+  for (let i = 0; i < radios.length; i++){
     if((radios[i].type === 'radio' && radios[i].checked)) {
       value = radios[i].value;
       console.log(value);

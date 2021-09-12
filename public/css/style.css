@@ -96,13 +96,25 @@ img {
   .topnav .icon {
     float: right;
     display: block;
-    margin-top: -15px;
   }
 }
 @media screen and (max-width: 768px) {
   .topnav.responsive {
     position: relative;
+    overflow: unset;
+    z-index: 10;
   }
+}
+.topnav.responsive .main-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+}
+.topnav.responsive .main-navbar a {
+  display: block;
 }
 @media screen and (max-width: 768px) {
   .topnav.responsive .icon {
@@ -121,6 +133,12 @@ img {
 
 .header-logo {
   float: left;
+  max-width: 250px;
+}
+.header-logo img {
+  max-width: 250px;
+  min-width: 100px;
+  width: 100%;
 }
 
 .main-navbar {
@@ -147,7 +165,7 @@ img {
 .bground {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 11;
   left: 0;
   top: 0;
   height: 100%;
@@ -515,6 +533,7 @@ main {
     background: #fff;
     color: #000;
     padding: 20px;
+    min-width: unset;
   }
   .hero-content:after {
     content: unset;
@@ -531,8 +550,14 @@ main {
 }
 @media screen and (max-width: 800px) {
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 3rem;
     white-space: normal;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 540px) {
+  .hero-headline {
+    font-size: 2rem;
   }
 }
 
@@ -546,6 +571,11 @@ main {
   .hero-text {
     width: unset;
     font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .hero-text {
+    font-size: 1.2rem;
   }
 }
 

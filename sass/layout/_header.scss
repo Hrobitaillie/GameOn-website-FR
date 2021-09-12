@@ -37,12 +37,24 @@
         @include mobile{
             float: right;
             display: block;
-            margin-top: -15px;
         }
     }
     &.responsive{
         @include tablet{
             position: relative;
+            overflow: unset;
+            z-index: 10;
+        }
+        .main-navbar{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            background-color: white;
+            position: absolute;
+            a{
+                display: block;
+            }
         }
         .icon{
             @include tablet{
@@ -62,6 +74,12 @@
 }
 .header-logo {
       float: left;
+      max-width: 250px;
+      img{
+          max-width: 250px;
+          min-width: 100px;
+          width: 100%;
+      }
 }
 .main-navbar {
       float: right;
