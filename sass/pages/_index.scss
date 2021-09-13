@@ -8,6 +8,10 @@ main {
     margin: 1px 20px 15px;
     border-radius: 2rem;
     text-align: justify;
+    @include mobile{
+      padding-left: 0.5vw;
+      padding-right: 0.5vw;
+    }
   }
   .hero-section {
     min-height: 93vh;
@@ -68,13 +72,14 @@ main {
     font-size: 6rem;
     font-weight: normal;
     white-space: nowrap;
+    font-weight: 500;
     @include ipad{
         font-size: 3rem;
         white-space: normal;
-        text-align:  center;
     }
     @include mobile{
-      font-size: 2rem;
+      font-weight: 600;
+      font-size: 27px;
     }
   }
   .hero-text {
@@ -87,8 +92,9 @@ main {
         font-size: 1.5rem;
     }
     @include mobile{
+      margin-top: 30px;
       font-size: 
-      1.2rem;
+      1rem;
     }
   }
   .btn-signup {

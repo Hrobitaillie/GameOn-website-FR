@@ -23,6 +23,10 @@
     width: 100%;
     overflow: auto;
     background-color: rgba(26, 39, 156, 0.4);
+    @include mobile{
+      top: 66px;
+      height: calc(100% - 66px);
+    }
   }
   .content {
     margin: 5% auto;
@@ -36,6 +40,17 @@
     position: relative;
     color: #fff;
     padding-top: 10px;
+    @include ipad{
+      border-radius: 0;
+      height: 90%;
+      padding-bottom: 2rem;
+      padding: 0;
+      overflow: scroll;
+    }
+    @include mobile{
+      margin: 0 auto;
+      height: 100%;
+    }
   }
   
   .modal-body {

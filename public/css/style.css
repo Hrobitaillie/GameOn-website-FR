@@ -136,7 +136,7 @@ img {
   max-width: 250px;
 }
 .header-logo img {
-  max-width: 250px;
+  max-width: 235px;
   min-width: 100px;
   width: 100%;
 }
@@ -173,6 +173,12 @@ img {
   overflow: auto;
   background-color: rgba(26, 39, 156, 0.4);
 }
+@media screen and (max-width: 540px) {
+  .bground {
+    top: 66px;
+    height: calc(100% - 66px);
+  }
+}
 
 .content {
   margin: 5% auto;
@@ -186,6 +192,21 @@ img {
   position: relative;
   color: #fff;
   padding-top: 10px;
+}
+@media screen and (max-width: 800px) {
+  .content {
+    border-radius: 0;
+    height: 90%;
+    padding-bottom: 2rem;
+    padding: 0;
+    overflow: scroll;
+  }
+}
+@media screen and (max-width: 540px) {
+  .content {
+    margin: 0 auto;
+    height: 100%;
+  }
 }
 
 .modal-body {
@@ -446,11 +467,57 @@ footer {
   top: 50%;
   margin: 0;
   transform: translate(-50%, -50%);
+  height: 739px;
+}
+@media screen and (max-width: 800px) {
+  .ModalConfirm .content {
+    border-radius: 0;
+    height: 90%;
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .ModalConfirm .content {
+    height: 100%;
+  }
 }
 .ModalConfirm .modal-body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 35%;
+  padding: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .ModalConfirm .modal-body {
+    padding: 0;
+  }
+}
+.ModalConfirm .modal-body .closeConfirm {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(0.7);
+}
+.ModalConfirm .modal-body .closeConfirm:before, .ModalConfirm .modal-body .closeConfirm:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 3px;
+  background-color: #fff;
+}
+.ModalConfirm .modal-body .closeConfirm:before {
+  transform: rotate(45deg);
+}
+.ModalConfirm .modal-body .closeConfirm:after {
+  transform: rotate(-45deg);
 }
 .ModalConfirm .modal-body .confirm-btn {
   outline: none;
@@ -480,6 +547,12 @@ main {
   margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
+}
+@media screen and (max-width: 540px) {
+  main {
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+  }
 }
 
 .hero-section {
@@ -547,17 +620,18 @@ main {
   font-size: 6rem;
   font-weight: normal;
   white-space: nowrap;
+  font-weight: 500;
 }
 @media screen and (max-width: 800px) {
   .hero-headline {
     font-size: 3rem;
     white-space: normal;
-    text-align: center;
   }
 }
 @media screen and (max-width: 540px) {
   .hero-headline {
-    font-size: 2rem;
+    font-weight: 600;
+    font-size: 27px;
   }
 }
 
@@ -575,7 +649,8 @@ main {
 }
 @media screen and (max-width: 540px) {
   .hero-text {
-    font-size: 1.2rem;
+    margin-top: 30px;
+    font-size: 1rem;
   }
 }
 

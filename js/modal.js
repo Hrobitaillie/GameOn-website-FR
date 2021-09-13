@@ -20,12 +20,15 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
 // launch modal form
 function launchModal() {
+  window.scrollTo(0, 0);
   modalbg.style.display = "block";
 }
 
 //---------------------------------------------------------------
 //---------------------------------------------------------------
 //---------------------------------------------------------------
+const nav = document.getElementById("nav");
+nav.addEventListener("click", editNav);
 
 //DOM Element Close button
 const closeBtn = document.querySelector(".close");
@@ -41,7 +44,8 @@ function closeModal(){
 
 //close confirm modal event
 confirmBtn.addEventListener("click", closeConfirm);
-
+const closeConfirmBtn = document.querySelector(".closeConfirm");
+closeConfirmBtn.addEventListener("click", closeConfirm);
 //close confirm modal action
 function closeConfirm(){
   console.log("modal confirm close function")
@@ -77,6 +81,7 @@ const conditionError = document.getElementById('conditionError');
 //---------------------------------------------------------------
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+  validate();
 })
 
 function validate(){
@@ -103,7 +108,7 @@ function validate(){
   // Testing lastname content
   if(last.value<2 || last.value == Number){
     lastError.style.display="block";
-    lastError.innerHTML = "Ecrivez un prénom de plus de 2 lettres";
+    lastError.innerHTML = "Ecrivez un nom de plus de 2 lettres";
     lastError.style.color="red";
     lastError.style.fontSize="14px";
   }else{
